@@ -1,0 +1,39 @@
+{
+  "name": "campus-admin-api",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "tsx --test tests/**/*.test.ts",
+    "db:migrate": "node --require tsx/cjs ./node_modules/sequelize-cli/lib/sequelize db:migrate",
+    "db:migrate:undo": "node --require tsx/cjs ./node_modules/sequelize-cli/lib/sequelize db:migrate:undo",
+    "db:seed": "node --require tsx/cjs ./node_modules/sequelize-cli/lib/sequelize db:seed:all"
+  },
+  "dependencies": {
+    "@google/genai": "^2.29.1",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.7",
+    "express": "^4.22.3",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "mysql2": "^3.24.5",
+    "sequelize": "^6.37.8",
+    "unpdf": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^26.6.5",
+    "sequelize-cli": "^6.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
